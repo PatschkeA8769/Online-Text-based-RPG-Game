@@ -1,1 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Quest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Mystery Quest</h1>
+        <div id="instructions">
+            <h2>Game Rules</h2>
+            <ul>
+                <li>Explore rooms to gather clues and items.</li>
+                <li>Each room contains a unique puzzle to solve.</li>
+                <li>You have 10 minutes to find the treasure!</li>
+                <li>Using hints deducts 30 seconds from your time.</li>
+            </ul>
+        </div>
+        <div id="game-info">
+            <div id="timer">Time Left: <span id="time">600</span> seconds</div>
+            <div id="current-room">Current Room: <span id="room-name">Entrance</span></div>
+            <div id="inventory">Inventory: <span id="inventory-list">None</span></div>
+            <button id="hint-button" disabled>Use Hint</button>
+            <button id="answer-button" disabled>Submit Answer</button>
+            <input type="text" id="answer-input" placeholder="Your answer" disabled>
+        </div>
+        <div id="room-description">
+            <p>Welcome to the Entrance. Explore the room!</p>
+        </div>
+        <button id="start-button">Start Game</button>
+    </div>
 
+    <script src="script.js"></script>
+</body>
+</html>
