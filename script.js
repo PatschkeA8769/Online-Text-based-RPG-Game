@@ -1,9 +1,11 @@
+/* initialize variables */
 let currentRoom = "Entrance";
 let timeLeft = 600; // 10 minutes in seconds
 let hintsUsed = 0;
 let inventory = [];
 let timerInterval;
 
+/* create nested objects */
 const rooms = {
     Entrance: {
         description: "You are at the entrance. A door leads into the next room.",
@@ -41,12 +43,6 @@ function startGame() {
     updateRoom(currentRoom);
 }
 
-function updateRoom(room) {
-    document.getElementById("room-name").innerText = room;
-    document.getElementById("room-description").innerHTML = rooms[room].description;
-    document.getElementById("room-description").innerHTML += `<br>Puzzle: ${rooms[room].puzzle}`;
-}
-
 function updateTimer() {
     if (timeLeft > 0) {
         timeLeft--;
@@ -56,6 +52,12 @@ function updateTimer() {
         alert("Time's up! Game Over.");
         resetGame();
     }
+}
+
+function updateRoom(room) {
+  document.getElementById("room-name").innerText = room;
+  document.getElementById("room-description").innerHTML = rooms[room].description;
+  document.getElementById("room-description").innerHTML += `<br>Puzzle: ${rooms[room].puzzle}`;
 }
 
 function useHint() {
