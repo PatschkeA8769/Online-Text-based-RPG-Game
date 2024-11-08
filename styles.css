@@ -22,6 +22,13 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+/* pause menu */
+#pause-menu {
+  background-color: #3c4043;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
 h1, h2 {
   color: #ffcc00;
   padding-bottom: 25px;
@@ -32,7 +39,7 @@ h2 {
 /* div 1 */
 #instructions ul {
   text-align: left;
-  width: 359px;
+  width: 360px;
   margin: auto;
   display: block;
 }
@@ -56,10 +63,16 @@ h2 {
 }
 #game-info #interact {
   padding-bottom: 10px;
+  width: 472px;
+  margin: auto;
+  font-size: 0px; /* remove space between buttons */
 }
 /* div 3 */
 #room-description {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+}
+#room-description p {
+  padding-bottom: 10px;
 }
 /* buttons and input */
 button {
@@ -68,14 +81,14 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 5px;
+  margin: 10px;
 }
 button:hover {
   background-color: #ffc107;
 }
 input {
   padding: 10px;
-  margin: 5px;
+  margin: 10px;
   border: none;
   border-radius: 5px;
 }

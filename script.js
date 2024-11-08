@@ -8,30 +8,38 @@ let timerInterval;
 /* create nested objects */
 const rooms = {
     Entrance: {
-        description: "You are at the entrance. A door leads into the next room.",
-        puzzle: "What is the sum of 2 + 2?",
+        description: "<p>You are at the entrance. A door leads into the next room.</p>",
+        puzzle: "What is the sum of 2 + 2?</p>",
         answer: "4",
         hint: "It's the number of legs on a chair.",
         nextRoom: "Room1"
     },
     Room1: {
-        description: "You have entered Room 1. A riddle awaits you.",
-        puzzle: "What has keys but can't open locks?",
+        description: "<p>You have entered Room 1. A riddle awaits you.</p>",
+        puzzle: "What has keys but can't open locks?</p>",
         answer: "Piano",
         hint: "It's a musical instrument.",
         nextRoom: "TreasureRoom"
     },
     TreasureRoom: {
-        description: "Congratulations! You've found the treasure room.",
-        puzzle: "What is the most common gas in the Earth's atmosphere?",
+        description: "<p>Congratulations! You've found the treasure room.</p>",
+        puzzle: "What is the most common gas in the Earth's atmosphere?</p>",
         answer: "Nitrogen",
         hint: "It's not oxygen!",
     }
 };
 
+document.getElementById("pause-button").addEventListener("click", pauseGame);
 document.getElementById("start-button").addEventListener("click", startGame);
 document.getElementById("hint-button").addEventListener("click", useHint);
 document.getElementById("answer-button").addEventListener("click", submitAnswer);
+
+/* pause menu covers screen */
+function pauseGame() {
+  const pauseMenu = document.getElementById("pause-menu");
+  pauseMenu.style.zIndex = "1";
+  pauseMenu.style.height = "1000px";
+}
 
 function startGame() {
     document.getElementById("start-button").disabled = true;
@@ -57,7 +65,7 @@ function updateTimer() {
 function updateRoom(room) {
   document.getElementById("room-name").innerText = room;
   document.getElementById("room-description").innerHTML = rooms[room].description;
-  document.getElementById("room-description").innerHTML += `<br>Puzzle: ${rooms[room].puzzle}`;
+  document.getElementById("room-description").innerHTML += `<p>Puzzle: ${rooms[room].puzzle}`;
 }
 
 function useHint() {
@@ -74,7 +82,7 @@ function submitAnswer() {
     const playerAnswer = document.getElementById("answer-input").value.trim();
     if (playerAnswer.toLowerCase() === rooms[currentRoom].answer.toLowerCase()) {
         alert("Correct! You may proceed to the next room.");
-        currentRoom = rooms[currentRoom].nextRoom || "TreasureRoom";
+        currentRoom = rooms[currentRoom].nextRoom || "<p>TreasureRoom";
         updateRoom(currentRoom);
         document.getElementById("answer-input").value = ""; // Clear input
     } else {
