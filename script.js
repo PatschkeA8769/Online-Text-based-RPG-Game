@@ -38,7 +38,8 @@ document.getElementById("answer-button").addEventListener("click", submitAnswer)
 function pauseGame() {
   const pauseMenu = document.getElementById("pause-menu");
   pauseMenu.style.zIndex = "1";
-  pauseMenu.style.height = "1000px";
+  pauseMenu.style.opacity = "1";
+  pauseMenu.style.height = "100%;";
 }
 
 function startGame() {
