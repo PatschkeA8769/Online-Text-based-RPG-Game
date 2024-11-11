@@ -11,14 +11,37 @@
     <div id="game-container">
         <!-- pause menu -->
         <div id="pause-menu">
-          <ul>
-            <li>Play</li>
-            <li>Options</li>
-            <li>Stats</li>
-            <li>Quit</li>
-          </ul>
+          <div>
+            <button id="play-button">Play</button><br>
+            <button id="options-button">Options</button><br>
+            <button id="stats-button">Stats</button><br>
+            <button id="quit-button">Quit</button>
+          </div>
         </div>
-
+        <!-- options screen -->
+        <div id="options">
+          <div>
+            <h1>Options</h1>
+            
+            <button id="close-options-button">Close</button>
+          </div>
+        </div>
+        <!-- stats screen -->
+        <div id="stats">
+          <div>
+            <h1>Statistics</h1>
+            <ul>
+              <li>Rooms Completed: <span id="rooms">0</span></li>
+              <li>Progress Percentage: <span id="progress">0</span>%</li>
+              <li>Hints Used: <span id="hints">0</span></li>
+              <li>Correct Answers: <span id="correct">0</span></li>
+              <li>Incorrect Answers: <span id="incorrect">0</span></li>
+              <li>Number of Pauses: <span id="pauses">0</span></li>
+            </ul>
+            <button id="close-stats-button">Close</button>
+          </div>
+        </div>
+        <!-- main page -->
         <h1>Mystery Quest</h1>
         <!-- div 1 -->
         <div id="instructions">
@@ -48,7 +71,7 @@
             <p>Welcome to the Entrance. Explore the room!</p>
         </div>
         <!-- pause menu -->
-        <button id="pause-button">Pause Game</button><br>
+        <button id="pause-button" disabled>Pause Game</button><br>
         <button id="start-button">Start Game</button>
     </div>
 </body>

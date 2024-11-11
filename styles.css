@@ -105,22 +105,51 @@ input {
   opacity: 0;
   height: 100vh;
 }
-#pause-menu ul {
+#pause-menu div {
   top: 50%;
   transform: translate(0%, -50%);
-  text-align: left;
   width: max-content;
   margin: auto;
   display: block;
-  list-style-type: none;
+  text-align: center;
 }
-#pause-menu ul li {
+#pause-menu div button {
   padding: 10px 20px;
   background-color: #ffcc00;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 20px;
   color: #000000;
+  text-align: center;
+}
+/* options screen */
+
+/* stats screen */
+#stats {
+  background-color: #3c4043;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  height: 100vh;
+}
+#stats div {
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: max-content;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+#stats ul {
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+#stats ul li {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
   text-align: center;
 }
