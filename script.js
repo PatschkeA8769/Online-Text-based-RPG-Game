@@ -5,10 +5,10 @@ let currentRoom = "Entrance";
 let inventory = [];
 let hintsUsed = 0;
 let roomsSolved = 0;
+let progressPerc = 0;
 let correctAnswers = 0;
 let incorrectAnswers = 0;
 let pauseCount = 0;
-let progressPerc = 0;
 const pauseMenu = document.getElementById("pause-menu");
 const stats = document.getElementById("stats");
 

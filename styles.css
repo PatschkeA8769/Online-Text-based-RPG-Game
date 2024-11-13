@@ -22,15 +22,24 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+header {
+  background-color: #242c32;
+}
+#MQ-logo {
+  display: block;
+  width: 250px;
+  margin: auto;
+}
 h1, h2 {
   color: #ffcc00;
-  padding-bottom: 25px;
 }
 h1 {
-  padding-top: 20px;
+  display: none;
+  text-align: center;
 }
 h2 {
- padding-bottom: 30px;
+ padding-top: 30px;
+ padding-bottom: 25px;
 }
 /* div 1 */
 #instructions {
