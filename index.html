@@ -8,16 +8,19 @@
 </head>
 <body>
     <!-- div container -->
-    <div id="game-container">
+    <div id="container">
         <!-- pause menu -->
         <div id="pause-menu">
           <div>
             <button id="play-button">Play</button><br>
+            <!-- incomplete -->
             <button id="options-button">Options</button><br>
+
             <button id="stats-button">Stats</button><br>
             <button id="quit-button">Quit</button>
           </div>
         </div>
+        <!-- incomplete -->
         <!-- options screen -->
         <!--
         <div id="options">
@@ -28,6 +31,7 @@
           </div>
         </div>
         -->
+
         <!-- stats screen -->
         <div id="stats">
           <div>
@@ -59,13 +63,15 @@
             </ul>
         </div>
         <!-- div 2 -->
-        <div id="game-info">
-            <div id="stats">
+        <div id="game">
+            <div id="info">
               <p id="timer">Time Left: <span id="time">600</span> seconds</p>
               <p id="current-room">Current Room: <span id="room-name">Entrance</span></p>
+              <!-- incomplete -->
               <p id="inventory">Inventory: <span id="inventory-list">None</span></p>
+
             </div>
-            <div id="interact">
+            <div id="inerface">
               <button id="hint-button" disabled>Use Hint</button>
               <button id="answer-button" disabled>Submit Answer</button>
               <input type="text" id="answer-input" placeholder="Your answer" disabled>

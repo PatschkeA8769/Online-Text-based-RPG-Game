@@ -2,7 +2,9 @@
 let timeLeft = 600; // 10 minutes in seconds
 let timerInterval;
 let currentRoom = "Entrance";
+/* incomplete */
 let inventory = [];
+
 let hintsUsed = 0;
 let roomsSolved = 0;
 let progressPerc = 0;
@@ -44,7 +46,9 @@ document.getElementById("pause-button").addEventListener("click", pauseGame);
 /* add pause menu buttons */
 document.getElementById("play-button").addEventListener("click", playGame);
 document.getElementById("quit-button").addEventListener("click", quitGame);
+/* incomplete */
 document.getElementById("options-button").addEventListener("click", showOptions);
+
 document.getElementById("stats-button").addEventListener("click", showStats);
 document.getElementById("close-stats-button").addEventListener("click", closeStats);
 
@@ -122,7 +126,9 @@ function resetGame() {
   /* reset variables */
   currentRoom = "Entrance";
   updateRoom(currentRoom);
+  /* incomplete */
   inventory = [];
+
   hintsUsed = 0;
   roomsSolved = 0;
   progressPerc = 0;
@@ -173,6 +179,7 @@ function quitGame() {
   resetGame();
 }
 
+/* incomplete */
 /* show Options screen */
 function showOptions() {
   options.style.zIndex = "1";
@@ -184,6 +191,7 @@ function closeOptions() {
   options.style.zIndex = "0";
   options.style.opacity = "0";
 }
+
 
 /* show Statistics screen */
 function showStats() {

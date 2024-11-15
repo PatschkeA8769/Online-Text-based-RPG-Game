@@ -15,7 +15,7 @@ body {
   font-size: 16px;
 }
 /* div container */
-#game-container {
+#container {
   max-width: 600px;
   margin: auto;
   background-color: #3c4043;
@@ -27,7 +27,7 @@ header {
 }
 #MQ-logo {
   display: block;
-  width: 250px;
+  max-width: 250px;
   margin: auto;
 }
 h1, h2 {
@@ -48,37 +48,38 @@ h2 {
 }
 #instructions ul {
   text-align: left;
-  width: max-content;
+  max-width: max-content;
   margin: auto;
   display: block;
+  padding: 0px 20px;
 }
 #instructions ul li {
   padding-bottom: 10px;
   list-style-position: inside;
 }
 /* div 2 */
-#game-info {
-  padding: 30px 0 10px;
+#game {
+  padding: 30px 0 20px;
 }
-#game-info #stats {
+#game #info {
   padding-bottom: 10px;
-  width: max-content;
+  max-width: max-content;
   margin: auto;
   display: block;
 }
-#game-info div p {
+#game div p {
   text-align: left;
   padding-bottom: 10px;
 }
-#game-info #interact {
+#game #interface {
   padding-bottom: 10px;
-  width: max-content;
+  max-width: max-content;
   margin: auto;
   font-size: 0px; /* remove space between buttons */
 }
 /* div 3 */
 #room-description {
-  padding-bottom: 10px;
+  padding: 0px 20px 10px;
 }
 #room-description p {
   padding-bottom: 10px;
@@ -117,7 +118,7 @@ input {
 #pause-menu div {
   top: 50%;
   transform: translate(0%, -50%);
-  width: max-content;
+  max-width: max-content;
   margin: auto;
   display: block;
   text-align: center;
@@ -131,6 +132,7 @@ input {
   color: #000000;
   text-align: center;
 }
+/* incomplete */
 /* options screen */
 
 /* stats screen */
@@ -145,7 +147,7 @@ input {
 #stats div {
   top: 50%;
   transform: translate(0%, -50%);
-  width: max-content;
+  max-width: max-content;
   margin: auto;
   display: block;
   text-align: center;
