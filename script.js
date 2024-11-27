@@ -182,7 +182,7 @@ function submitAnswer() {
     correctAnswers++;
     roomsSolved++;
     /* calculate the percentage of game completion */
-    calcProgressPerc += ((100/3)*100/100);
+    calcProgressPerc += ((100/10)*100/100);
     progressPerc = Math.trunc(calcProgressPerc);
     document.getElementById("correct").innerText = correctAnswers;
     document.getElementById("rooms").innerText = roomsSolved;
@@ -211,6 +211,11 @@ function resetGame() {
   correctAnswers = 0;
   incorrectAnswers = 0;
   pauseCount = 0;
+  document.getElementById("hints").innerText = hintsUsed;
+  document.getElementById("correct").innerText = correctAnswers;
+  document.getElementById("rooms").innerText = roomsSolved;
+  document.getElementById("progress").innerText = progressPerc;
+  document.getElementById("incorrect").innerText = incorrectAnswers;
   /* enable/disable buttons */
   document.getElementById("start-button").disabled = false;
   document.getElementById("hint-button").disabled = true;
@@ -234,6 +239,11 @@ function restartGame() {
   correctAnswers = 0;
   incorrectAnswers = 0;
   pauseCount = 0;
+  document.getElementById("hints").innerText = hintsUsed;
+  document.getElementById("correct").innerText = correctAnswers;
+  document.getElementById("rooms").innerText = roomsSolved;
+  document.getElementById("progress").innerText = progressPerc;
+  document.getElementById("incorrect").innerText = incorrectAnswers;
   /* enable/disable buttons */
   document.getElementById("start-button").disabled = true;
   document.getElementById("hint-button").disabled = false;
